@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          wellcom React
+          wellcom React2
         </a>
       </header>
     </div>
