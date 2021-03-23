@@ -4,40 +4,7 @@ import {connect} from 'react-redux'
 
 import { readEvents} from '../actions'
 import _ from 'lodash'
-/*
-const App = () => { 
-  return <Counter></Counter>
-}
-
-
-class Counter extends Component{
-
-  constructor(props){
-      super(props);
-      this.state= {count:0}
-  }
-
-  handlePlusButton = ()=>{
-    let count = this.state.count;
-    this.setState({count: count + 1});
-  }
-  handleMinusButton = ()=>{
-    let count = this.state.count;
-    this.setState({count: count - 1});
-  }
-  
-
-  render(){
-      return (
-      <React.Fragment>
-        <div> count : {this.state.count}</div>
-        <button onClick={this.handlePlusButton}>+1</button>
-        <button onClick={this.handleMinusButton}>-1</button>
-      </React.Fragment>
-      )
-  }
-}
-*/
+import { Link } from 'react-router-dom' 
 
 
 class EventsIndex extends Component{
@@ -61,6 +28,7 @@ renderEvents(){
   render(){
      
       return (
+        <React.Fragment>
        <table>
         <thead>
           <tr>
@@ -73,6 +41,8 @@ renderEvents(){
          {this.renderEvents()}
         </tbody>
        </table>
+       <Link to="/events/new">New Event</Link>
+       </React.Fragment>
       )
   }
 }
